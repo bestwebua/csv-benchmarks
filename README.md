@@ -67,8 +67,8 @@ File: tmp_input.csv
 File size: 25.18 MB
 Row count: 40000
 Column count: 20
-Reading entire file: 31.46 ms (Memory: 39.51 MB, CPU: 4.5%)
-Reading line by line: 22.92 ms (Memory: 0.42 MB, CPU: 2.4%)
+Reading entire file: 33.64 ms (Memory: 39.16 MB, CPU: 4.6%)
+Reading line by line: 23.18 ms (Memory: 0.44 MB, CPU: 2.5%)
 
 Running benchmarks (3 runs)...
   Entire file run 1/3
@@ -83,8 +83,8 @@ File: tmp_input.csv
 File size: 25.18 MB
 Row count: 40000
 Column count: 20
-Reading entire file: 329.96 ms (Memory: 27.71 MB, CPU: 32.9%)
-Reading line by line: 263.52 ms (Memory: 0.98 MB, CPU: 26.2%)
+Reading entire file: 329.86 ms (Memory: 28.12 MB, CPU: 32.9%)
+Reading line by line: 263.56 ms (Memory: 0.31 MB, CPU: 26.3%)
 
 
 Benchmarks completed!
@@ -99,30 +99,30 @@ Benchmarks completed!
 +------------+--------------+---------------+-------------+---------+
 | Language   | Method       | Duration (ms) | Memory (MB) | CPU (%) |
 +------------+--------------+---------------+-------------+---------+
-| Go 1.23.0  | entire_file  | 31.46         | 39.51       | 4.5     |
-| Ruby 3.3.5 | entire_file  | 329.96        | 27.71       | 32.9    |
+| Go 1.23.0  | entire_file  | 33.64         | 39.16       | 4.6     |
+| Ruby 3.3.5 | entire_file  | 329.86        | 28.12       | 32.9    |
 +------------+--------------+---------------+-------------+---------+
-| Go 1.23.0  | line_by_line | 22.92         | 0.42        | 2.4     |
-| Ruby 3.3.5 | line_by_line | 263.52        | 0.98        | 26.2    |
+| Go 1.23.0  | line_by_line | 23.18         | 0.44        | 2.5     |
+| Ruby 3.3.5 | line_by_line | 263.56        | 0.31        | 26.3    |
 +------------+--------------+---------------+-------------+---------+
 
 Performance Comparison:
 
 Entire_file:
-  Go 1.23.0: 31.46ms (🏆 Fastest)
-    Memory: 39.51MB
-    CPU: 4.5%
-  Ruby 3.3.5: 329.96ms (948.8% slower)
-    Memory: 27.71MB
+  Go 1.23.0: 33.64ms (🏆 Fastest)
+    Memory: 39.16MB
+    CPU: 4.6%
+  Ruby 3.3.5: 329.86ms (9.81x slower)
+    Memory: 28.12MB
     CPU: 32.9%
 
 Line_by_line:
-  Go 1.23.0: 22.92ms (🏆 Fastest)
-    Memory: 0.42MB
-    CPU: 2.4%
-  Ruby 3.3.5: 263.52ms (1049.7% slower)
-    Memory: 0.98MB
-    CPU: 26.2%
+  Go 1.23.0: 23.18ms (🏆 Fastest)
+    Memory: 0.44MB
+    CPU: 2.5%
+  Ruby 3.3.5: 263.56ms (11.37x slower)
+    Memory: 0.31MB
+    CPU: 26.3%
 
 === Overall Statistics ===
 
@@ -133,23 +133,23 @@ Columns: 20
 
 Go 1.23.0 Statistics:
   entire_file:
-    Duration: 31.46ms
-    Memory: 39.51MB
-    CPU: 4.5%
+    Duration: 33.64ms
+    Memory: 39.16MB
+    CPU: 4.6%
   line_by_line:
-    Duration: 22.92ms
-    Memory: 0.42MB
-    CPU: 2.4%
+    Duration: 23.18ms
+    Memory: 0.44MB
+    CPU: 2.5%
 
 Ruby 3.3.5 Statistics:
   entire_file:
-    Duration: 329.96ms
-    Memory: 27.71MB
+    Duration: 329.86ms
+    Memory: 28.12MB
     CPU: 32.9%
   line_by_line:
-    Duration: 263.52ms
-    Memory: 0.98MB
-    CPU: 26.2%
+    Duration: 263.56ms
+    Memory: 0.31MB
+    CPU: 26.3%
 ```
 
 ## Contributing

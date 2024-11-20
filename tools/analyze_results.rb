@@ -93,6 +93,7 @@ class BenchmarkAnalyzer
       # Sort by duration for ranking
       sorted = results.sort_by { |row| row['duration_ms'].to_f }
       fastest = sorted.first
+      fastest_duration = fastest['duration_ms'].to_f
       
       sorted.each do |result|
         duration = result['duration_ms'].to_f
@@ -102,8 +103,9 @@ class BenchmarkAnalyzer
         if result == fastest
           comparison = "🏆 Fastest"
         else
-          diff_percent = ((duration - fastest['duration_ms'].to_f) / fastest['duration_ms'].to_f * 100).round(1)
-          comparison = "#{diff_percent}% slower"
+          # Calculate how many times slower: slower_time / faster_time
+          times_slower = (duration / fastest_duration).round(2)
+          comparison = "#{times_slower}x slower"
         end
         
         puts "  #{result['language']}: #{format('%.2f', duration)}ms (#{comparison})"
