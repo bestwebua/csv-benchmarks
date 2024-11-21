@@ -67,8 +67,8 @@ File: tmp_input.csv
 File size: 25.18 MB
 Row count: 40000
 Column count: 20
-Reading entire file: 33.64 ms (Memory: 39.16 MB, CPU: 4.6%)
-Reading line by line: 23.18 ms (Memory: 0.44 MB, CPU: 2.5%)
+Reading entire file: 34.26 ms (Memory: 39.16 MB, CPU: 4.7%)
+Reading line by line: 22.59 ms (Memory: 0.42 MB, CPU: 2.4%)
 
 Running benchmarks (3 runs)...
   Entire file run 1/3
@@ -83,48 +83,13 @@ File: tmp_input.csv
 File size: 25.18 MB
 Row count: 40000
 Column count: 20
-Reading entire file: 329.86 ms (Memory: 28.12 MB, CPU: 32.9%)
-Reading line by line: 263.56 ms (Memory: 0.31 MB, CPU: 26.3%)
+Reading entire file: 329.24 ms (Memory: 28.24 MB, CPU: 32.8%)
+Reading line by line: 258.19 ms (Memory: 0.27 MB, CPU: 25.8%)
 
 
 Benchmarks completed!
 
-=================================
-|| File Analysis ||
-|| Filename      || tmp_input.csv ||
-|| File size     || 25.18 MB      ||
-|| Rows          || 40000         ||
-|| Columns       || 20            ||
-=================================
-+------------+--------------+---------------+-------------+---------+
-| Language   | Method       | Duration (ms) | Memory (MB) | CPU (%) |
-+------------+--------------+---------------+-------------+---------+
-| Go 1.23.0  | entire_file  | 33.64         | 39.16       | 4.6     |
-| Ruby 3.3.5 | entire_file  | 329.86        | 28.12       | 32.9    |
-+------------+--------------+---------------+-------------+---------+
-| Go 1.23.0  | line_by_line | 23.18         | 0.44        | 2.5     |
-| Ruby 3.3.5 | line_by_line | 263.56        | 0.31        | 26.3    |
-+------------+--------------+---------------+-------------+---------+
-
-Performance Comparison:
-
-Entire_file:
-  Go 1.23.0: 33.64ms (🏆 Fastest)
-    Memory: 39.16MB
-    CPU: 4.6%
-  Ruby 3.3.5: 329.86ms (9.81x slower)
-    Memory: 28.12MB
-    CPU: 32.9%
-
-Line_by_line:
-  Go 1.23.0: 23.18ms (🏆 Fastest)
-    Memory: 0.44MB
-    CPU: 2.5%
-  Ruby 3.3.5: 263.56ms (11.37x slower)
-    Memory: 0.31MB
-    CPU: 26.3%
-
-=== Overall Statistics ===
+===== Overall Statistics =======
 
 File: tmp_input.csv
 Size: 25.18MB
@@ -133,23 +98,41 @@ Columns: 20
 
 Go 1.23.0 Statistics:
   entire_file:
-    Duration: 33.64ms
+    Duration: 34.26ms
     Memory: 39.16MB
-    CPU: 4.6%
+    CPU: 4.7%
   line_by_line:
-    Duration: 23.18ms
-    Memory: 0.44MB
-    CPU: 2.5%
+    Duration: 22.59ms
+    Memory: 0.42MB
+    CPU: 2.4%
 
 Ruby 3.3.5 Statistics:
   entire_file:
-    Duration: 329.86ms
-    Memory: 28.12MB
-    CPU: 32.9%
+    Duration: 329.24ms
+    Memory: 28.24MB
+    CPU: 32.8%
   line_by_line:
-    Duration: 263.56ms
-    Memory: 0.31MB
-    CPU: 26.3%
+    Duration: 258.19ms
+    Memory: 0.27MB
+    CPU: 25.8%
+
+==== Performance Comparison ====
+
+Entire_file:
+  Go 1.23.0: 34.26ms (🏆 Fastest)
+    Memory: 39.16MB
+    CPU: 4.7%
+  Ruby 3.3.5: 329.24ms (9.61x slower)
+    Memory: 28.24MB
+    CPU: 32.8%
+
+Line_by_line:
+  Go 1.23.0: 22.59ms (🏆 Fastest)
+    Memory: 0.42MB
+    CPU: 2.4%
+  Ruby 3.3.5: 258.19ms (11.43x slower)
+    Memory: 0.27MB
+    CPU: 25.8%
 ```
 
 ## Contributing
